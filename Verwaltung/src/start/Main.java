@@ -6,6 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Storage stor = new Storage();
 		UserDialog dialog = new UserDialog(stor);
+		dialog.start();
 	}
 
 }
