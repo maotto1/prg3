@@ -29,7 +29,10 @@ public class Storage {
 	}
 	
 	
-	
+	/**
+	 * Searchs for saved instances of class Student
+	 * @return 
+	 */
 	public ArrayList<Student> getListOfStudents() {
 		ArrayList<Student> students = new ArrayList<Student>();
 		for (Human person : persons) {
@@ -40,6 +43,10 @@ public class Storage {
 		return students;
 	}
 	
+	/**
+	 * Searchs for saved instances of class StudentAssistant
+	 * @return 
+	 */
 	public ArrayList<StudentAssistant> getListOfStudentAssistants(){
 		ArrayList<StudentAssistant> studentAssistants = new ArrayList<StudentAssistant>();
 		ArrayList<Employee> employees = new ArrayList<Employee>();
@@ -51,6 +58,10 @@ public class Storage {
 		return studentAssistants;
 	}
 	
+	/**
+	 * Searchs for saved instances of class Employee
+	 * @return 
+	 */
 	public ArrayList<Employee> getListOfEmployees(){
 		ArrayList<Employee> employees = new ArrayList<Employee>();
 		for (Human person : persons) {

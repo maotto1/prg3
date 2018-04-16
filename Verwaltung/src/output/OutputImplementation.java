@@ -20,15 +20,30 @@ public class OutputImplementation implements Output {
 	@Override
 	public void printInstances() {
 		ArrayList<Human> persons = storage.getListOfPersons();
-		
+		for (Human human: persons) {
+			print(human);
+		}
 	}
 	
 	
-
+	/**
+	 * print students, than student assistants and therefore employees
+	 */
 	@Override
 	public void printInstancesSortedByType() {
 		// TODO Auto-generated method stub
-		ArrayList<Human> persons = storage.getListOfPersons();
+		ArrayList<Student> students = storage.getListOfStudents();
+		for (Student student: students) {
+			print(student);
+		}
+		ArrayList<StudentAssistant> studentAssistants = storage.getListOfStudentAssistants();
+		for (StudentAssistant human: studentAssistants) {
+			print(human);
+		}
+		ArrayList<StudentAssistant> employees = storage.getListOfStudentAssistants();
+		for (StudentAssistant employee: employees) {
+			print(employee);
+		}
 	}
 
 	@Override
@@ -37,9 +52,15 @@ public class OutputImplementation implements Output {
 		
 	}
 	
+	/**
+	 * print on console, if human is istance from one of the following classes: Student, StudentAssistant, Employee
+	 * @param human
+	 */
 	private void print(Human human) {
+		System.out.println(human.getName());
 		if (human.getClass().equals(Student.class)) {
-			System.out.println();
+			System.out.println("\tStudent: \t\t");
+			System.out.printf("\t %s" , ((Student) human).getUniversity());
 		}
 		else if(human.getClass().equals(StudentAssistant.class)) {
 			
