@@ -8,7 +8,7 @@ public class Human implements PersonInterface {
 	private String surname, forename;
 	private char sex;
 	
-	Human(String surname, String forename, int age, char sex){
+	public Human(String surname, String forename, int age, char sex){
 		this.age = age;
 		this.forename = forename;
 		this.surname = surname;

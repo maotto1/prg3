@@ -13,7 +13,7 @@ public class OutputImplementation implements Output {
 	
 	private Storage storage;
 	
-	OutputImplementation(Storage storage){
+	public OutputImplementation(Storage storage){
 		this.storage = storage;
 	}
 
@@ -48,7 +48,14 @@ public class OutputImplementation implements Output {
 
 	@Override
 	public void search(String search) {
-		// TODO Auto-generated method stub
+		ArrayList<Human> results = storage.getListOfHumansWithSurname(search);
+		if (results == null)
+			System.out.println("no results");
+		else {
+			System.out.println("found ");
+			for (Human human: results)
+				print(human);
+		}
 		
 	}
 	

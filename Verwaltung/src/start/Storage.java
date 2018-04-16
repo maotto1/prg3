@@ -71,4 +71,24 @@ public class Storage {
 		}
 		return employees;
 	}
+	
+	public void insertPerson(Human human) {
+		persons.add(human);
+	}
+	
+	/**
+	 * searchs for persons with surname begins with 'search'
+	 * @param search
+	 * @return 
+	 */
+	public ArrayList<Human> getListOfHumansWithSurname(String search){
+		ArrayList<Human> res = new ArrayList<Human>();
+		Human human;
+		for (Iterator<Human> iter =  persons.iterator(); iter.hasNext();) {
+			human = iter.next();
+			if (human.getName().startsWith(search))
+				res.add(human);
+		}
+		return res;
+	}
 }
