@@ -60,7 +60,7 @@ public class OutputImplementation implements Output {
 	}
 	
 	/**
-	 * print on console, if human is istance from one of the following classes: Student, StudentAssistant, Employee
+	 * print on console, if human is instance from one of the following classes: Student, StudentAssistant, Employee
 	 * @param human
 	 */
 	private void print(Human human) {
