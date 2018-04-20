@@ -1,19 +1,21 @@
 package persons;
 
 import interfaces.StudentInterface;
+import start.Weekday;
 
 public class Student extends Human implements StudentInterface{
 	
 	private final int matrikelNumber;
 	private int semester;
-	private String course, university;
+	private String course, university, degree;
 	
-	Student(int matrikelnummer, int semester, String university, String course, String surname, String forename, int age, char sex){
-		super(surname, forename, age, sex);
+	public Student(int matrikelnummer, int semester, String university, String degree, String course, String surname, String forename, int age, char sex, Weekday[] freeDays){
+		super(surname, forename, age, sex, freeDays);
 		matrikelNumber = matrikelnummer;
 		this.semester = semester;
 		this.university = university;
 		this.course = course;
+		this.setDegree(degree);
 	}
 
 	@Override
@@ -38,5 +40,13 @@ public class Student extends Human implements StudentInterface{
 
 	public void incrementSemester() {
 		++semester;
+	}
+
+	public String getDegree() {
+		return degree;
+	}
+
+	public void setDegree(String degree) {
+		this.degree = degree;
 	}
 }

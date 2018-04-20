@@ -6,6 +6,7 @@ public interface StudentInterface {
 	public int getSemester();
 	public String getUniversity();
 	public String getCourse();
+	public String getDegree();
 	public void incrementSemester();
 
 }

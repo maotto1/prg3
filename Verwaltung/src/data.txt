@@ -1,12 +1,12 @@
-Autrich, Bettina, 17, f
-Bode, Marianne, 23, f
-Dodecker, Nino, 22, m
-Grienle, Gisela, 40, f,
-Klink, Anton, 37, m
-Maier, Stefanie, 22, f
-Maier, Robert, 20, m
-Nietsche, Henry, 24, m
-Pliess, Pauline, 25, f
-Riese, Adam, 53, m
-Wulf, Henriette, 27, f
-Zorn, Roswitha, 30, f
+Autrich, Bettina, 17, f, 1234567, S, 543345, 1, htw, bachelor, ai,
+Bode, Marianne, 23, f, 7, A, 342234, 5, htw, bachelor, ai, 10, 20, 9.5, 01.04.2018, 31.10.2018, 
+Dodecker, Nino, 22, m, 23, A, 33435, 4, htw, bachelor, ai, 18, 20, 11.25, 01.10.2017, 31.10.2018, 
+Grienle, Gisela, 40, f, 67, E, Addidas, marketing chief, 12.12.2000,  3422.10,
+Klink, Anton, 37, m, 27, E, Nike, analyst, 21.02.2005, 4366,
+Maier, Stefanie, 22, f, 367, S, 412237, 3, htw, bachelor, ai,
+Maier, Robert, 20, m, 167, A, 302039, 8, htw, master,  ai, 20, 20, 18, 01.04.2017, 31.10.2018, 
+Nietsche, Henry, 24, m, 123567, S, 203843, 10, htw, bachelor, wi,
+Pliess, Pauline, 25, f, 67, S, 523322, 1, htw, bachelor, ai,
+Riese, Adam, 53, m, 67, E, Nike, marketing chief, 01.02.1993, 12003,
+Wulf, Henriette, 27, f, 2356, S, 343423, 14, htw, bachelor, ai,
+Zorn, Roswitha, 30, f, 7, H,

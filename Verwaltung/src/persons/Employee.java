@@ -2,6 +2,7 @@ package persons;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import interfaces.EmployeeInterface;
 import start.Weekday;
@@ -10,35 +11,16 @@ public class Employee extends Human implements EmployeeInterface {
 	
 	private String employer, position;
 	private Date contractBegin, contractEnd;
-	private Weekday[] freeDays;
+	private double salary;
 	
-	public Employee(String employer, String position, Date contractBegin, Weekday[] freeDays, String surname, String forename, int age, char sex) {
-		super(surname, forename, age, sex);
+	public Employee(String employer, String position, Date contractBegin, double salary, String surname, String forename, int age, char sex, Weekday[] freeDays) {
+		super(surname, forename, age, sex, freeDays);
 		this.employer = employer;
 		this.position = position;
 		this.contractBegin = contractBegin;
-		this.freeDays = new Weekday[7];
-		if (freeDays != null) {
-			for (int i=0; i< freeDays.length; i++) {
-				if (freeDays[i] == Weekday.MONDAY )
-					this.freeDays[Weekday.MONDAY.ordinal()] = Weekday.MONDAY;
-				if (freeDays[i] == Weekday.TUESDAY )
-					this.freeDays[Weekday.TUESDAY.ordinal()] = Weekday.TUESDAY;
-				if (freeDays[i] == Weekday.WEDNESDAY )
-					this.freeDays[Weekday.WEDNESDAY.ordinal()] = Weekday.WEDNESDAY;
-				if (freeDays[i] == Weekday.THURSDAY )
-					this.freeDays[Weekday.THURSDAY.ordinal()] = Weekday.THURSDAY;
-				if (freeDays[i] == Weekday.FRIDAY )
-					this.freeDays[Weekday.FRIDAY.ordinal()] = Weekday.FRIDAY;
-				if (freeDays[i] == Weekday.SATURDAY )
-					this.freeDays[Weekday.SATURDAY.ordinal()] = Weekday.SATURDAY;
-				if (freeDays[i] == Weekday.SUNDAY )
-					this.freeDays[Weekday.SUNDAY.ordinal()] = Weekday.SUNDAY;
-			}
-		}
-		else {
-			this.freeDays = Weekday.values();
-		}
+		this.contractEnd = null;
+		this.salary = salary;
+
 	}
 	
 	/**
@@ -74,13 +56,19 @@ public class Employee extends Human implements EmployeeInterface {
 		//**
 		return freeDays;
 	}
-	public void setFreeDays(ArrayList<Weekday> freeDays) {
-		this.freeDays = null;
-	}
+
 	@Override
 	public void setSurname(String name) {
 		// TODO Automatisch generierter Methodenstub
 		
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
 	}
 	
 	
