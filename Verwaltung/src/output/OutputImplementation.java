@@ -20,7 +20,10 @@ public class OutputImplementation implements Output {
 	public OutputImplementation(Storage storage){
 		this.storage = storage;
 	}
-
+	
+	/**
+	 * prints all Instances on the console
+	 */
 	@Override
 	public void printInstances() {
 		ArrayList<Human> persons = storage.getListOfPersons();
@@ -49,7 +52,10 @@ public class OutputImplementation implements Output {
 			print(employee);
 		}
 	}
-
+	
+	/**
+	 * compares all surnames of in storage saved persons with given String
+	 */
 	@Override
 	public void search(String search) {
 		ArrayList<Human> results = storage.getListOfHumansWithSurname(search);
