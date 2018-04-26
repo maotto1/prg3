@@ -49,7 +49,6 @@ public class Storage {
 	 */
 	public ArrayList<StudentAssistant> getListOfStudentAssistants(){
 		ArrayList<StudentAssistant> studentAssistants = new ArrayList<StudentAssistant>();
-		ArrayList<Employee> employees = new ArrayList<Employee>();
 		for (Human person : persons) {
 			if (person.getClass().equals(StudentAssistant.class)){
 				studentAssistants.add((StudentAssistant) person);

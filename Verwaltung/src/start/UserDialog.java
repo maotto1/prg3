@@ -42,6 +42,7 @@ public class UserDialog {
 		Scanner scanner = new Scanner(System.in);
 		String wanted = scanner.next().trim();
 		System.out.println("Result(s) for "+wanted + " : \n");
+		scanner.close();
 		out.search(wanted);
 	}
 
@@ -77,6 +78,7 @@ public class UserDialog {
 			if (choice > 4 && choice <1)
 				System.out.println("invalid choice");
 		} while(choice > 4 && choice <1);
+		scanner.close();
 		
 		if (choice == 1)
 			insertStudentDialog(surname, forename, age, sex, freeDays);
@@ -104,6 +106,7 @@ public class UserDialog {
 		degree = scanner.next().trim();
 		System.out.println("Please enter course name");
 		course = scanner.next().trim();
+		scanner.close();
 		
 		this.storage.insertPerson(new Student(matrikelnummer, semester, university, degree, course, surname, forename, age, sex, freeDays));
 	}
@@ -145,7 +148,7 @@ public class UserDialog {
 		} catch (ParseException e) {
 			System.out.println("Date not accepted.");
 		}
-		
+		scanner.close();
 		this.storage.insertPerson(new StudentAssistant(matrikelnummer, semester, university, degree, course, maxHours, minHours, hourlyWage, contractBegin, contractEnd, surname, forename, age, sex, freeDays));
 	}
 	
@@ -168,6 +171,7 @@ public class UserDialog {
 		}
 		System.out.println("Please enter salary");
 		salary = scanner.nextDouble();
+		scanner.close();
 		
 		this.storage.insertPerson(new Employee(employer, position, contractBegin, salary, surname, forename, age, sex, freeDays));
 	}
@@ -182,6 +186,7 @@ public class UserDialog {
 		System.out.println("5 \t exit\n");
 		Scanner scanner = new Scanner(System.in);
 		choice = scanner.nextInt();
+		scanner.close();
 		return choice;
 	}
 
