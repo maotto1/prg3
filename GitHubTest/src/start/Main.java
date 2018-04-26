@@ -14,6 +14,10 @@ public class Main {
 		SensorEventListener listener = new SensorEventListener(context);
 		handler.add(listener);
 		
+		// Usercommunication
+				
+		handler.remove(listener);
+		
 		//
 	}
 	
