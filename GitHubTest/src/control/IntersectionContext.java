@@ -1,20 +1,25 @@
 package control;
 
+import observerPattern.Subject;
 import states.IntersectionTrafficLightsState;
 import states.TrafficLight;
 import states.UpDownDownright;
 
-public class IntersectionContext {
+public class IntersectionContext extends Subject {
 	
 	final long MIN_STAYING_TIME = 2000, TRANSITION_TIME = 1000; 
 	private IntersectionTrafficLightsState state;
 	private long lastChange;
 	
 	public IntersectionContext() {
-		setIntersectionState(new UpDownDownright());
+		state = new UpDownDownright();
+		super.notifyObservers();
 		lastChange = System.currentTimeMillis();
 	}
 	
+	/*
+	 * 
+	 */
 	public void setIntersectionState (final IntersectionTrafficLightsState STATE) {
 		// minimal phase of green light
 		while (System.currentTimeMillis() - lastChange < MIN_STAYING_TIME) {	
@@ -43,6 +48,7 @@ public class IntersectionContext {
 				}
 				
 			};
+			super.notifyObservers();
 			try {
 				Thread.sleep(TRANSITION_TIME);
 			} catch (InterruptedException e) {
@@ -52,6 +58,7 @@ public class IntersectionContext {
 		}
 
 		this.state = STATE;
+		super.notifyObservers();
 		lastChange = System.currentTimeMillis();
 	}
 	

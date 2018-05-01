@@ -7,6 +7,9 @@ public class SensorEvent extends EventObject{
 	
 	private final SensorPosition sensorPosition;
 	
+	/*
+	 * source : 
+	 */
 	public SensorEvent(Object source, SensorPosition position) {
 		super(source);
 		sensorPosition = position;
