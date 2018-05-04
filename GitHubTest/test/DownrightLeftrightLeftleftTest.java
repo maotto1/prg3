@@ -1,11 +1,9 @@
 import static org.junit.Assert.*;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import states.DownrightLeftrightLeftleft;
 import states.TrafficLight;
-import states.UpUpleftLeftright;
 
 public class DownrightLeftrightLeftleftTest {
 

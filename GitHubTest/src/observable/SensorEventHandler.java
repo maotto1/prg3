@@ -7,14 +7,14 @@ import observer.SensorEventListener;
 
 public class SensorEventHandler {
 	
-	List<SensorEventListener> listenerList= new ArrayList<SensorEventListener>();
+	private List<SensorEventListener> listenerList= new ArrayList<SensorEventListener>();
 	
-	public void add(SensorEventListener listener) {
-		this.listenerList.add(listener);
+	public boolean add(SensorEventListener listener) {
+		return this.listenerList.add(listener);
 	}
 	
-	public void remove(SensorEventListener listener) {
-		this.listenerList.remove(listener);
+	public boolean remove(SensorEventListener listener) {
+		return this.listenerList.remove(listener);
 	}
 	
 	public void notify(SensorEvent event) {

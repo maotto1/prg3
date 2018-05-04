@@ -29,9 +29,7 @@ public class CrossroadControl {
 	}
 	
 	public void initialise() {
-		
-		console.instruct();
-		
+		console.instruct();	
 	}
 	
 	
@@ -70,12 +68,9 @@ public class CrossroadControl {
 	}
 
 	public void finish() {
-		// TODO Auto-generated method stub
 		handler.remove(listener);
 		context.deleteObserver(console);
 		System.out.println("GoodBye!");
-		
-		java.util.Collection<Object> d;
 	}
 
 }
