@@ -5,7 +5,7 @@ import java.util.List;
 
 public abstract class Subject {
 	
-	List<Observer> observerList= new ArrayList<Observer>();
+	private final List<Observer> observerList= new ArrayList<Observer>();
 	
 	public void addObserver(Observer o) {
 		observerList.add(o);

@@ -7,7 +7,7 @@ import states.TrafficLight;
 
 public class Console implements Observer{
 	
-	private IntersectionContext context;
+	private final IntersectionContext context;
 	
 	public Console(IntersectionContext context) {
 		this.context = context;

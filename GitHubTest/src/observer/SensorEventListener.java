@@ -11,7 +11,7 @@ import states.UpUpleftLeftright;
 
 public class SensorEventListener implements EventListener {
 	
-	IntersectionContext context;
+	private final IntersectionContext context;
 	
 	public SensorEventListener(IntersectionContext context) {
 		this.context = context;

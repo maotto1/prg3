@@ -2,9 +2,11 @@ package observable;
 
 import java.util.EventObject;
 
-@SuppressWarnings("serial")
+
 public class SensorEvent extends EventObject{
 	
+
+	private static final long serialVersionUID = 297532924417611016L;
 	private final SensorPosition sensorPosition;
 	
 	/*
