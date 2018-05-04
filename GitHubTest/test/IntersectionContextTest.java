@@ -9,6 +9,7 @@ import states.UpUpleftLeftright;
 
 public class IntersectionContextTest {
 	IntersectionContext context;
+;
 
 	@Before
 	public void setUp() throws Exception {
@@ -28,8 +29,8 @@ public class IntersectionContextTest {
 		long lastChange1 = System.currentTimeMillis(), lastChange2;
 		context.setIntersectionState(new UpUpleftLeftright());
 		lastChange2 = System.currentTimeMillis();
-		assertTrue(lastChange1 > lastChange2);
-		assertSame(new UpUpleftLeftright(), context.getState() );
+		assertTrue(lastChange1 < lastChange2);
+		assertSame(new UpUpleftLeftright().getClass(), context.getState().getClass() );
 	}
-
+	
 }

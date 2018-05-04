@@ -37,11 +37,18 @@ public class CrossroadControl {
 		System.out.println("");
 		console.printStatus();
 		Scanner scanner = new Scanner(System.in);
-		String input = scanner.next().trim();
+		String input;
 		int direction;
 		while ( !(input = scanner.next().trim()).equals(":q") ) {
-			direction = Integer.parseInt(input);
+			direction = -1;
+			try {
+				direction = Integer.parseInt(input);
+			} catch( NumberFormatException e) {
+				System.out.print(input+ " is not an integer between 0 and 5!\n");
+			};
 			switch (direction){
+			case -1:
+				break;
 			case 0:
 				handler.notify(new SensorEvent(this, SensorPosition.DOWN));
 				break;

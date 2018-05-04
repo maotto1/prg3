@@ -7,7 +7,7 @@ import observer.SensorEventListener;
 
 public class SensorEventHandler {
 	
-	private List<SensorEventListener> listenerList= new ArrayList<SensorEventListener>();
+	private final List<SensorEventListener> listenerList= new ArrayList<SensorEventListener>();
 	
 	public boolean add(SensorEventListener listener) {
 		return this.listenerList.add(listener);
