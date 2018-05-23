@@ -10,9 +10,9 @@ public class PrimeMultipleStriker extends PrimeNumberSearcher{
 	
 	@Override
 	public void run() {
-		for (int i=2*prime; i < 10000; i += prime) {
+		for (int i=2*prime; i < threshold; i += prime) {
 			if (putDivisibleNumber(i)) {
-				
+				addDivisor(prime, i);
 			}
 		}
 	}

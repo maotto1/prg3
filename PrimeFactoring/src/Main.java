@@ -1,4 +1,5 @@
 import data.PrimeNumberSearcher;
+import observer.PrimeFactorFinder;
 
 public class Main {
 
@@ -6,11 +7,11 @@ public class Main {
 		// get prime numbers
 		PrimeNumberSearcher pns = new PrimeNumberSearcher();
 		pns.run();
-		// start 
+		// start user interface
 		
-		for (int i= 3; i < 10; i+=3) {
-			System.out.println(i);
-		}
+		new PrimeFactorFinder(1200000467).run();
+		new PrimeFactorFinder(120).run();
+	
 	}
 
 }
