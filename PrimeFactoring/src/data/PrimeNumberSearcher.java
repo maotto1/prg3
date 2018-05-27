@@ -2,6 +2,7 @@ package data;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -18,6 +19,7 @@ public class PrimeNumberSearcher extends Thread{
 	public static HashMap<Integer, Condition> waitingConditions = new HashMap<Integer, Condition>();
 	protected final int threshold = 1000;// Integer.MAX_VALUE/2;
 	
+	private ExecutorService threads =;
 	
 	protected synchronized boolean putPrime(int prime) {
 		if (!primeNumbers.containsKey(prime)) {
